@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses | EduFlow</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .filter-select {
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            background: var(--surface);
+            min-width: 140px;
+        }
+
+        .search-bar {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.75rem 3rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            background: var(--surface);
+        }
+
+        .search-bar ion-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.25rem;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 4rem;
+        }
+
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .page-btn.active {
+            background: var(--primary);
+            color: #fff;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <ion-icon name="rocket-outline"></ion-icon>
+                Edu<span>Flow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="dashboard.html">My Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="user-info" style="display:flex; align-items:center; gap:0.5rem;">
+                    <span style="font-weight:500; font-size:0.875rem;">John Doe</span>
+                    <div class="avatar" style="background:#ddd;"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="section">
+        <div class="container">
+            <div class="section-title" style="margin-bottom: 3rem;">
+                <h2>Explore Courses</h2>
+                <p>Over 1,200+ online courses in various disciplines</p>
+            </div>
+
+            <div class="filter-header">
+                <div class="search-bar">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="Search for courses, tools, or skills...">
+                </div>
+                <div style="display:flex; gap:1rem; align-items:center;">
+                    <span style="font-size:0.875rem; color:var(--text-muted);">Sort by:</span>
+                    <select class="filter-select">
+                        <option>Most Popular</option>
+                        <option>Newest</option>
+                        <option>Rating</option>
+                        <option>Price: Low to High</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-row">
+                <select class="filter-select">
+                    <option>Categories</option>
+                    <option>Development</option>
+                    <option>Design</option>
+                    <option>Business</option>
+                </select>
+                <select class="filter-select">
+                    <option>Level</option>
+                    <option>Beginner</option>
+                    <option>Intermediate</option>
+                    <option>Advanced</option>
+                </select>
+                <select class="filter-select">
+                    <option>Price</option>
+                    <option>Free</option>
+                    <option>Paid</option>
+                </select>
+                <select class="filter-select">
+                    <option>Language</option>
+                    <option>English</option>
+                    <option>Spanish</option>
+                    <option>French</option>
+                </select>
+            </div>
+
+            <div class="grid-3">
+                <!-- Course Card 1 -->
+                <div class="course-card">
+                    <a href="course.html">
+                        <div class="course-thumb">
+                            <span class="course-badge">Development</span>
+                            <div class="placeholder-image" style="background: #3b82f6;"><ion-icon name="logo-python"></ion-icon></div>
+                        </div>
+                    </a>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <span><ion-icon name="star" style="color:var(--warning)"></ion-icon> 4.9 (5.2k)</span>
+                            <span>54 Lessons</span>
+                        </div>
+                        <a href="course.html"><h3 class="course-title">Python for Data Science and Machine Learning Bootcamp</h3></a>
+                        <div class="course-footer">
+                            <div class="instructor">
+                                <div class="avatar" style="background: #ef4444;"></div>
+                                <span>Dr. Maria Ross</span>
+                            </div>
+                            <div class="price">$129.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="course-card">
+                    <a href="course.html">
+                        <div class="course-thumb">
+                            <span class="course-badge">Design</span>
+                            <div class="placeholder-image" style="background: #8b5cf6;"><ion-icon name="color-wand"></ion-icon></div>
+                        </div>
+                    </a>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <span><ion-icon name="star" style="color:var(--warning)"></ion-icon> 4.8 (1.1k)</span>
+                            <span>28 Lessons</span>
+                        </div>
+                        <a href="course.html"><h3 class="course-title">Mastering Brand Identity & Graphic Design Fundamentals</h3></a>
+                        <div class="course-footer">
+                            <div class="instructor">
+                                <div class="avatar" style="background: #f59e0b;"></div>
+                                <span>James Corden</span>
+                            </div>
+                            <div class="price">$74.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="course-card">
+                    <a href="course.html">
+                        <div class="course-thumb">
+                            <span class="course-badge">Business</span>
+                            <div class="placeholder-image" style="background: #10b981;"><ion-icon name="briefcase"></ion-icon></div>
+                        </div>
+                    </a>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <span><ion-icon name="star" style="color:var(--warning)"></ion-icon> 4.7 (450)</span>
+                            <span>15 Lessons</span>
+                        </div>
+                        <a href="course.html"><h3 class="course-title">Effective Leadership: Building and Managing Great Teams</h3></a>
+                        <div class="course-footer">
+                            <div class="instructor">
+                                <div class="avatar" style="background: #3b82f6;"></div>
+                                <span>Sarah Jenkins</span>
+                            </div>
+                            <div class="price">$49.99</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="course-card">
+                    <a href="course.html">
+                        <div class="course-thumb">
+                            <span class="course-badge">Development</span>
+                            <div class="placeholder-image" style="background: #6366f1;"><ion-icon name="logo-javascript"></ion-icon></div>
+                        </div>
+                    </a>
+                    <div class="course-body">
+                        <div class="course-meta">
+                            <span><ion-icon name="star" style="color:var(--warning)"></ion-icon> 4.9 (8.3k)</span>
+                            <span>64 Lessons</span>
+                        </div>
+                        <a href="course.html"><h3 class="course-title">The Complete 2026 Web Development Bootcamp</h3></a>
+                        <div class="course-footer">
+                            <div class="instructor">
+                                <div class="avatar" style="background: #ec4899;"></div>
+                                <span>Dr. Angela Yu</span>
+                            </div>
+                            <div class="price">$19.99</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More cards can be added here -->
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="page-btn"><ion-icon name="chevron-back"></ion-icon></a>
+                <a href="#" class="page-btn active">1</a>
+                <a href="#" class="page-btn">2</a>
+                <a href="#" class="page-btn">3</a>
+                <a href="#" class="page-btn">...</a>
+                <a href="#" class="page-btn">12</a>
+                <a href="#" class="page-btn"><ion-icon name="chevron-forward"></ion-icon></a>
+            </div>
+        </div>
+    </main>
+
+    <footer style="padding: 4rem 0; background: var(--text-primary); color: #fff; margin-top: 4rem;">
+        <!-- Reuse Footer from index.html -->
+        <div class="container" style="text-align:center; color: var(--text-muted); font-size: 0.875rem;">
+            &copy; 2026 EduFlow. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

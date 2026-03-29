@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dashboard | EduFlow</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background:var(--background);">
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="index.html" class="logo">
+                <ion-icon name="rocket-outline"></ion-icon>
+                Edu<span>Flow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="dashboard.html" class="active">My Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="nav-actions">
+                <ion-icon name="notifications-outline" style="font-size:1.5rem; color:var(--text-secondary); cursor:pointer;"></ion-icon>
+                <div class="avatar" style="width:36px; height:36px; background:#e2e8f0; border:1px solid var(--border);"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-grid container">
+        <aside class="sidebar">
+            <div class="sidebar-nav">
+                <a href="#" class="sidebar-link active">
+                    <ion-icon name="apps-outline"></ion-icon>
+                    Overview
+                </a>
+                <a href="#" class="sidebar-link">
+                    <ion-icon name="book-outline"></ion-icon>
+                    My Courses
+                </a>
+                <a href="#" class="sidebar-link">
+                    <ion-icon name="time-outline"></ion-icon>
+                    Study Plan
+                </a>
+                <a href="#" class="sidebar-link">
+                    <ion-icon name="chatbubbles-outline"></ion-icon>
+                    Messages
+                </a>
+                <a href="#" class="sidebar-link">
+                    <ion-icon name="settings-outline"></ion-icon>
+                    Settings
+                </a>
+            </div>
+
+            <div class="progress-card">
+                <h4 style="font-size:0.875rem; margin-bottom:0.5rem; opacity:0.9;">Weekly Goal</h4>
+                <div style="font-size:1.5rem; font-weight:800; margin-bottom:0.75rem;">12 / 20 Hours</div>
+                <div class="progress-bar">
+                    <div class="progress-value" style="width: 60%;"></div>
+                </div>
+                <p style="font-size:0.75rem; opacity:0.8;">Keep it up! You're 3 hours ahead of last week.</p>
+            </div>
+        </aside>
+
+        <section style="padding: 2rem 0;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2.5rem;">
+                <div>
+                    <h2 style="font-size:2rem; margin-bottom:0.25rem;">Welcome back, John!</h2>
+                    <p style="color:var(--text-secondary);">You've completed <span style="font-weight:700; color:var(--primary);">85%</span> of your goal this week.</p>
+                </div>
+                <a href="courses.html" class="btn btn-primary">Find More Courses</a>
+            </div>
+
+            <div style="margin-bottom: 3rem;">
+                <h3 style="font-size:1.25rem; margin-bottom:1.5rem;">Continue Studying</h3>
+                <div style="background:var(--surface); padding:1.5rem; border-radius:var(--radius-lg); border:1px solid var(--border); display:flex; gap:2rem; align-items:center;">
+                    <div style="width:240px; aspect-ratio:16/9; background:#6366f1; border-radius:var(--radius-md); display:flex; align-items:center; justify-content:center;">
+                        <ion-icon name="logo-react" style="color:#fff; font-size:3rem;"></ion-icon>
+                    </div>
+                    <div style="flex:1;">
+                        <div style="font-size:0.875rem; color:var(--primary); font-weight:600; margin-bottom:0.5rem;">MODERN REACT & NEXT.JS</div>
+                        <h4 style="font-size:1.5rem; margin-bottom:1rem;">Lesson 12: Advanced Patterns for Compound Components</h4>
+                        <div style="display:flex; align-items:center; gap:2rem;">
+                            <div style="flex:1;">
+                                <div class="progress-bar" style="margin:0; background:#f1f5f9; height:10px;">
+                                    <div class="progress-value" style="width: 45%; background:var(--primary);"></div>
+                                </div>
+                                <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-top:0.5rem; color:var(--text-muted);">
+                                    <span>24m remaining</span>
+                                    <span>45% Complete</span>
+                                </div>
+                            </div>
+                            <a href="lesson.html" class="btn btn-primary" style="padding:0.75rem 2.5rem;">Resume Learning</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size:1.25rem; margin-bottom:1.5rem;">My Enrolled Courses</h3>
+            <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="course-card" style="display:flex; gap:1.5rem; padding: 1.25rem; align-items:center;">
+                    <div style="width:120px; height:80px; background:#ec4899; border-radius:var(--radius-md); flex-shrink:0;"></div>
+                    <div style="flex:1;">
+                        <h4 style="font-size:1rem; margin-bottom:0.5rem;">Mastering UI/UX Design with Figma</h4>
+                        <div style="display:flex; align-items:center; gap:1rem;">
+                            <div class="progress-bar" style="margin:0; background:#f1f5f9; height:6px;">
+                                <div class="progress-value" style="width: 82%; background:#ec4899;"></div>
+                            </div>
+                            <span style="font-size:0.75rem; font-weight:700;">82%</span>
+                        </div>
+                    </div>
+                    <a href="lesson.html" style="color:var(--primary); font-size:1.5rem;"><ion-icon name="play-circle-outline"></ion-icon></a>
+                </div>
+
+                <div class="course-card" style="display:flex; gap:1.5rem; padding: 1.25rem; align-items:center;">
+                    <div style="width:120px; height:80px; background:#10b981; border-radius:var(--radius-md); flex-shrink:0;"></div>
+                    <div style="flex:1;">
+                        <h4 style="font-size:1rem; margin-bottom:0.5rem;">Startup Strategy & Marketing</h4>
+                        <div style="display:flex; align-items:center; gap:1rem;">
+                            <div class="progress-bar" style="margin:0; background:#f1f5f9; height:6px;">
+                                <div class="progress-value" style="width: 15%; background:#10b981;"></div>
+                            </div>
+                            <span style="font-size:0.75rem; font-weight:700;">15%</span>
+                        </div>
+                    </div>
+                    <a href="lesson.html" style="color:var(--primary); font-size:1.5rem;"><ion-icon name="play-circle-outline"></ion-icon></a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
